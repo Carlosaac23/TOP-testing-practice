@@ -5,3 +5,18 @@ export function capitalize(word) {
 export function reverseString(word) {
   return word.split('').reverse().join('');
 }
+
+export const calculator = {
+  add: (number1, number2) => {
+    return number1 + number2;
+  },
+  subtract: (number1, number2) => {
+    return number1 - number2;
+  },
+  divide: (number1, number2) => {
+    return number1 / number2;
+  },
+  multiply: (number1, number2) => {
+    return number1 * number2;
+  },
+};
