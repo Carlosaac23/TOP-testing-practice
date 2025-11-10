@@ -1,4 +1,4 @@
-import { capitalize } from '../main';
+import { capitalize } from './main';
 
 test('takes a string and returns it with the first character capitalized', () => {
   const word1 = 'dog';
