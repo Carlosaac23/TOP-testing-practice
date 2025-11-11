@@ -52,5 +52,5 @@ test('that takes a string and a shift factor and returns it with each character 
   expect(caesarCipher('xyz', 3)).toBe(result1);
   expect(caesarCipher('HeLLo', 3)).toBe(result2);
   expect(caesarCipher('Hello, World!', 3)).toBe(result3);
-  expect(caesarCipher('This is a test message')).toBe(result4);
+  expect(caesarCipher('This is a test message', 5)).toBe(result4);
 });
