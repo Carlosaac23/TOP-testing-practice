@@ -24,11 +24,11 @@ export const calculator = {
 export function caesarCipher(string, shiftFactor) {
   const lowercaseAlphabet = 'abcdefghijklmnopqrstuvwxyz';
   const uppercaseAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const specialCharacters = ' !¡?¿*.,:;ªº@#~[]{}()-_+=/\\|<>"\'`´^$%&°';
+  const specialCharacters = ' !¡?¿*.,:;ªº@#~[]{}()-_+=/\\|<>"\'`^$%&°';
   const ALPHABET_LENGTH = 26;
+  const stringToCipher = string.split('');
 
   let result = '';
-  let stringToCipher = string.split('');
 
   for (const letter of stringToCipher) {
     if (lowercaseAlphabet.includes(letter)) {
