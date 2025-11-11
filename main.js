@@ -20,3 +20,5 @@ export const calculator = {
     return number1 * number2;
   },
 };
+
+export function caesarCipher(string, shiftFactor) {}
