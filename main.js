@@ -48,3 +48,18 @@ export function caesarCipher(string, shiftFactor) {
 
   return result;
 }
+
+export function analyzeArray(array) {
+  const totalSum = array.reduce((prev, curr) => prev + curr, 0);
+  const arrayLength = array.length;
+  const average = Math.floor(totalSum / arrayLength);
+  const min = Math.min(...array);
+  const max = Math.max(...array);
+
+  return {
+    average,
+    min,
+    max,
+    length: arrayLength,
+  };
+}
