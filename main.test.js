@@ -1,4 +1,4 @@
-import { calculator, capitalize, reverseString } from './main';
+import { caesarCipher, calculator, capitalize, reverseString } from './main';
 
 test('takes a string and returns it with the first character capitalized', () => {
   const word1 = 'dog';
