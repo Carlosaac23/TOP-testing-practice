@@ -21,4 +21,30 @@ export const calculator = {
   },
 };
 
-export function caesarCipher(string, shiftFactor) {}
+export function caesarCipher(string, shiftFactor) {
+  const lowercaseAlphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const uppercaseAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const specialCharacters = ' !¡?¿*.,:;';
+  const ALPHABET_LENGTH = 26;
+
+  let result = '';
+  let stringToCipher = string.split('');
+
+  for (const letter of stringToCipher) {
+    if (lowercaseAlphabet.includes(letter)) {
+      const letterIndex = lowercaseAlphabet.indexOf(letter);
+      const newIndex = (letterIndex + shiftFactor) % ALPHABET_LENGTH;
+      const newLetter = lowercaseAlphabet[newIndex];
+      result += newLetter;
+    } else if (uppercaseAlphabet.includes(letter)) {
+      const letterIndex = uppercaseAlphabet.indexOf(letter);
+      const newIndex = (letterIndex + shiftFactor) % ALPHABET_LENGTH;
+      const newLetter = uppercaseAlphabet[newIndex];
+      result += newLetter;
+    } else if (specialCharacters.includes(letter)) {
+      result += letter;
+    }
+  }
+
+  return result;
+}
