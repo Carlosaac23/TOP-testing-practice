@@ -42,3 +42,15 @@ test('a object that contains functions for the basic operations', () => {
   expect(product(10, 14)).toEqual(140);
   expect(product(2, 2)).toEqual(4);
 });
+
+test('that takes a string and a shift factor and returns it with each character “shifted”', () => {
+  const result1 = 'abc';
+  const result2 = 'KhOOr';
+  const result3 = 'Khoor, Zruog!';
+  const result4 = 'Ymnx nx f yjxy rjxxflj';
+
+  expect(caesarCipher('xyz', 3)).toBe(result1);
+  expect(caesarCipher('HeLLo', 3)).toBe(result2);
+  expect(caesarCipher('Hello, World!', 3)).toBe(result3);
+  expect(caesarCipher('This is a test message')).toBe(result4);
+});
