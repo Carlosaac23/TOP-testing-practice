@@ -62,12 +62,28 @@ test('that takes a string and a shift factor and returns it with each character 
 });
 
 test('that takes an array of numbers and returns an object with the following properties: average, min, max, and length', () => {
-  const result = {
+  const result1 = {
     average: 4,
     min: 1,
     max: 8,
     length: 6,
   };
 
-  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual(result);
+  const result2 = {
+    average: 4,
+    min: 1,
+    max: 10,
+    length: 6,
+  };
+
+  const result3 = {
+    average: 15,
+    min: 2,
+    max: 33,
+    length: 7,
+  };
+
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual(result1);
+  expect(analyzeArray([1, 10, 2, 5, 1, 9])).toEqual(result2);
+  expect(analyzeArray([3, 33, 31, 22, 10, 8, 2])).toEqual(result3);
 });
